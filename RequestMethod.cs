@@ -3,8 +3,11 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Collections.Generic;
 using System.Text.Json;
+
 public class RequestMethod{
+    
     private static readonly HttpClient client = new HttpClient();
+    
     public static async Task<List<Repository>> ProcessRepositories()
     {
     client.DefaultRequestHeaders.Accept.Clear();
